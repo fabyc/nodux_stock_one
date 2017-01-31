@@ -1,0 +1,23 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:ir.action,name:act_stock_form"
+msgid "Stock"
+msgstr "Inventario"
+
+msgctxt "model:ir.action.act_window.domain,name:act_stock_form_domain_all"
+msgid "Inventario de Mercaderia"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_stock"
+msgid "Stock"
+msgstr "Inventario"
+
+msgctxt "model:ir.ui.menu,name:menu_stock_"
+msgid "Stock"
+msgstr "Inventario"
+
+msgctxt "view:product.template:"
+msgid "Inventario"
+msgstr ""

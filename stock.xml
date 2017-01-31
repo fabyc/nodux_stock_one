@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="stock_view_tree">
+            <field name="model">product.template</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="10"/>
+            <field name="name">stock_tree</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_stock_form">
+            <field name="name">Stock</field>
+            <field name="res_model">product.template</field>
+            <field name="search_value"></field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_stock_form_view1">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="stock_view_tree"/>
+            <field name="act_window" ref="act_stock_form"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_stock_form_domain_all">
+            <field name="name">Inventario de Mercaderia</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[('active', '=', True)]</field>
+            <field name="act_window" ref="act_stock_form"/>
+        </record>
+
+        <menuitem name="Stock" id="menu_stock" sequence="7"/>
+        <menuitem name="Stock" parent="menu_stock" id="menu_stock_"
+            sequence="1" icon="tryton-list" action="act_stock_form"/>
+    </data>
+</tryton>
