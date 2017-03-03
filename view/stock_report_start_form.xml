@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form string="Print Inventory Report ">
+    <label name="company"/>
+    <field name="company"/>
+    <newline/>
+    <label name="all_products"/>
+    <field name="all_products"/>
+    <label name="greater_zero"/>
+    <field name="greater_zero"/>
+</form>

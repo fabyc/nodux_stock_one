@@ -36,5 +36,23 @@ this repository contains the full copyright notices and license terms. -->
         <menuitem name="Stock" id="menu_stock" sequence="7" icon="tryton-inventory"/>
         <menuitem name="Stock" parent="menu_stock" id="menu_stock_"
             sequence="1" icon="tryton-list" action="act_stock_form"/>
+        <!--REPORTE TOTAL DE INVENTARIO-->
+        <record model="ir.ui.view" id="print_stock_report_start_view_form">
+            <field name="model">nodux_stock_one.print_report_stock.start</field>
+            <field name="type">form</field>
+            <field name="name">stock_report_start_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_stocks_report">
+            <field name="name">Reporte de Inventario</field>
+            <field name="wiz_name">nodux_stock_one.print_report_stock</field>
+        </record>
+        <record model="ir.action.report" id="report_stocks">
+            <field name="name">Reporte de Inventario</field>
+            <field name="model"></field>
+            <field name="report_name">nodux_stock_one.report_stocks</field>
+            <field name="report">nodux_stock_one/report_stocks.ods</field>
+        </record>
+        <menuitem parent="menu_stock" action="wizard_stocks_report"
+            id="menu_stock_report" icon="tryton-print"/>
     </data>
 </tryton>

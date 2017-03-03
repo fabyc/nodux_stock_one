@@ -2,9 +2,33 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
+msgctxt "field:nodux_stock_one.print_report_stock.start,all_products:"
+msgid "All products"
+msgstr "Todos los productos"
+
+msgctxt "field:nodux_stock_one.print_report_stock.start,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:nodux_stock_one.print_report_stock.start,greater_zero:"
+msgid "Greater than zero"
+msgstr "Mayor a cero"
+
+msgctxt "field:nodux_stock_one.print_report_stock.start,id:"
+msgid "ID"
+msgstr "ID"
+
 msgctxt "model:ir.action,name:act_stock_form"
 msgid "Stock"
 msgstr "Inventario"
+
+msgctxt "model:ir.action,name:report_stocks"
+msgid "Reporte de Inventario"
+msgstr ""
+
+msgctxt "model:ir.action,name:wizard_stocks_report"
+msgid "Reporte de Inventario"
+msgstr ""
 
 msgctxt "model:ir.action.act_window.domain,name:act_stock_form_domain_all"
 msgid "Inventario de Mercaderia"
@@ -18,6 +42,126 @@ msgctxt "model:ir.ui.menu,name:menu_stock_"
 msgid "Stock"
 msgstr "Inventario"
 
+msgctxt "model:ir.ui.menu,name:menu_stock_report"
+msgid "Reporte de Inventario"
+msgstr ""
+
+msgctxt "model:nodux_stock_one.print_report_stock.start,name:"
+msgid "Print Report Products Start"
+msgstr "Imprimir Reporte de Inventario"
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "$"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "("
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid ")"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid ","
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "-"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "/"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "/for"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "00/00/0000"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "00:00:00"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "???"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "CANTIDAD"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "CÓDIGO"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "INVENTARIO GENERAL DE MERCADERIA  -"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "PRECIO COSTO"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "PRECIO DE VENTA"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "PRODUCTO"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "Page"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "company.party.name"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "for each=\"product in products\""
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid ""
+"formatLang(product.cost_price, company.party.lang, "
+"currency=company.currency)"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid ""
+"formatLang(product.list_price, company.party.lang, "
+"currency=company.currency)"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "product.code1"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "product.name"
+msgstr ""
+
+msgctxt "odt:nodux_stock_one.report_stocks:"
+msgid "product.total"
+msgstr ""
+
+msgctxt "view:nodux_stock_one.print_report_stock.start:"
+msgid "Print Inventory Report "
+msgstr "Imprimir Reporte de Inventario"
+
 msgctxt "view:product.template:"
 msgid "Inventario"
 msgstr ""
+
+msgctxt "wizard_button:nodux_stock_one.print_report_stock,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:nodux_stock_one.print_report_stock,start,print_:"
+msgid "Print"
+msgstr "Imprimir"
