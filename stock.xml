@@ -54,5 +54,72 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <menuitem parent="menu_stock" action="wizard_stocks_report"
             id="menu_stock_report" icon="tryton-print"/>
+
+        <!--INVENTARIO INICIAL -->
+        <!-- Views -->
+        <record model="ir.ui.view" id="stock_initial_line_view_tree">
+            <field name="model">stock.line</field>
+            <field name="type">tree</field>
+            <field name="priority">20</field>
+            <field name="name">stock_initial_line_tree</field>
+        </record>
+        <record model="ir.ui.view" id="stock_initial_line_view_form">
+            <field name="model">stock.line</field>
+            <field name="type">form</field>
+            <field name="name">stock_initial_line_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="stock_initial_view_tree">
+            <field name="model">stock.stock</field>
+            <field name="type">tree</field>
+            <field name="priority">20</field>
+            <field name="name">stock_initial_tree</field>
+        </record>
+        <record model="ir.ui.view" id="stock_initial_view_form">
+            <field name="model">stock.stock</field>
+            <field name="type">form</field>
+            <field name="priority">20</field>
+            <field name="name">stock_initial_form</field>
+        </record>
+        <!-- Actions -->
+        <record model="ir.action.act_window" id="act_stock_initial_form">
+            <field name="name">Inventario Inicial</field>
+            <field name="res_model">stock.stock</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_stock_initial_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="stock_initial_view_form"/>
+            <field name="act_window" ref="act_stock_initial_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_stock_initial_view_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="stock_initial_view_tree"/>
+            <field name="act_window" ref="act_stock_initial_form"/>
+        </record>
+
+        <record model="ir.action.act_window.domain" id="act_stock_initial_form_domain_draft">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain">[('state', '=', 'draft')]</field>
+            <field name="act_window" ref="act_stock_initial_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_initial_form_domain_done">
+            <field name="name">Done</field>
+            <field name="sequence" eval="20"/>
+            <field name="domain">[('state', '=', 'done')]</field>
+            <field name="act_window" ref="act_stock_initial_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_stock_initial_form_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="9999"/>
+            <field name="domain"></field>
+            <field name="act_window" ref="act_stock_initial_form"/>
+        </record>
+
+        <menuitem name="Inventario Inicial" parent="menu_stock" id="menu_stock_initial_pos"
+            sequence="1" icon="tryton-list" action="act_stock_initial_form"/>
+
     </data>
 </tryton>

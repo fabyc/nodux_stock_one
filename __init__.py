@@ -1,9 +1,13 @@
 from trytond.pool import Pool
 from .stock import *
+from .company import *
 
 def register():
     Pool.register(
+        Stock,
+        StockLine,
         PrintReportStockStart,
+        Company,
         module='nodux_stock_one', type_='model')
     Pool.register(
         PrintReportStock,

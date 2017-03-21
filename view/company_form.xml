@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/notebook/page[@id='reports']" position="after">
+        <page string="Sequence Stock" id="stock">
+            <label name="sequence_stock"/>
+            <field name="sequence_stock"/>
+        </page>
+    </xpath>
+</data>
