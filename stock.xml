@@ -121,5 +121,29 @@ this repository contains the full copyright notices and license terms. -->
 
         <menuitem name="Inventario Inicial" parent="menu_stock" id="menu_stock_initial_pos"
             sequence="1" icon="tryton-list" action="act_stock_initial_form"/>
+
+        <!--PERMISOS -->
+        <record model="res.group" id="group_stock">
+              <field name="name">Nodux - Inventario</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_stock">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_stock"/>
+        </record>
+
+        <record model="res.user-res.group" id="user_trigger_group_stock">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_stock"/>
+        </record>
+
+        <record model="ir.ui.menu-res.group" id="menu_stock_group_stock_report">
+            <field name="menu" ref="menu_stock_report"/>
+            <field name="group" ref="group_stock"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_stock_group_stock_initial">
+            <field name="menu" ref="menu_stock_initial_pos"/>
+            <field name="group" ref="group_stock"/>
+        </record>
+
     </data>
 </tryton>
