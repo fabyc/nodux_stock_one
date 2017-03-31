@@ -52,6 +52,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="model"></field>
             <field name="report_name">nodux_stock_one.report_stocks</field>
             <field name="report">nodux_stock_one/report_stocks.ods</field>
+            <field name="template_extension">ods</field>
         </record>
         <menuitem parent="menu_stock" action="wizard_stocks_report"
             id="menu_stock_report" icon="tryton-print"/>
