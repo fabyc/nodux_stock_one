@@ -4,6 +4,8 @@
         <page string="Sequence Stock" id="stock">
             <label name="sequence_stock"/>
             <field name="sequence_stock"/>
+            <label name="sequence_stock_out"/>
+            <field name="sequence_stock_out"/>
         </page>
     </xpath>
 </data>

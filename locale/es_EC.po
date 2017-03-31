@@ -4,7 +4,11 @@ msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "field:company.company,sequence_stock:"
 msgid "Sequence Stock"
-msgstr "Secuencia Inventario"
+msgstr "Secuencia Ingreso Inventario"
+
+msgctxt "field:company.company,sequence_stock_out:"
+msgid "Sequence Stock Out"
+msgstr "Secuencia Salida Inventario"
 
 msgctxt "field:nodux_stock_one.print_report_stock.start,all_products:"
 msgid "All products"
@@ -66,6 +70,50 @@ msgctxt "field:stock.line,write_uid:"
 msgid "Write User"
 msgstr "Modificado por Usuario"
 
+msgctxt "field:stock.line_out,create_date:"
+msgid "Create Date"
+msgstr "Fecha de Creación"
+
+msgctxt "field:stock.line_out,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:stock.line_out,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:stock.line_out,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:stock.line_out,product:"
+msgid "Product"
+msgstr "Productos"
+
+msgctxt "field:stock.line_out,quantity:"
+msgid "Quantity"
+msgstr "Cantidad"
+
+msgctxt "field:stock.line_out,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:stock.line_out,sequence:"
+msgid "Sequence"
+msgstr "Secuencia"
+
+msgctxt "field:stock.line_out,stock:"
+msgid "Stock"
+msgstr "Inventario"
+
+msgctxt "field:stock.line_out,write_date:"
+msgid "Write Date"
+msgstr "Fecha de Modificación"
+
+msgctxt "field:stock.line_out,write_uid:"
+msgid "Write User"
+msgstr "Modificado por Usuario"
+
 msgctxt "field:stock.stock,company:"
 msgid "Company"
 msgstr "Empresa"
@@ -114,12 +162,64 @@ msgctxt "field:stock.stock,write_uid:"
 msgid "Write User"
 msgstr "Modificado por Usuario"
 
+msgctxt "field:stock.stock_out,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:stock.stock_out,create_date:"
+msgid "Create Date"
+msgstr "Fecha de Creación"
+
+msgctxt "field:stock.stock_out,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:stock.stock_out,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:stock.stock_out,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:stock.stock_out,lines:"
+msgid "Lines"
+msgstr "Lineas"
+
+msgctxt "field:stock.stock_out,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:stock.stock_out,reference:"
+msgid "Number"
+msgstr "Número"
+
+msgctxt "field:stock.stock_out,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:stock.stock_out,stock_date:"
+msgid "Stock Date"
+msgstr "Fecha Inventario"
+
+msgctxt "field:stock.stock_out,write_date:"
+msgid "Write Date"
+msgstr "Fecha de Modificación"
+
+msgctxt "field:stock.stock_out,write_uid:"
+msgid "Write User"
+msgstr "Modificado por Usuario"
+
 msgctxt "model:ir.action,name:act_stock_form"
 msgid "Stock"
 msgstr "Inventario"
 
 msgctxt "model:ir.action,name:act_stock_initial_form"
-msgid "Inventario Inicial"
+msgid "Ingreso de Inventario"
+msgstr "Ingreso de Inventario"
+
+msgctxt "model:ir.action,name:act_stock_out_form"
+msgid "Salida de Inventario"
 msgstr ""
 
 msgctxt "model:ir.action,name:report_stocks"
@@ -149,6 +249,20 @@ msgctxt ""
 msgid "Draft"
 msgstr "Borrador"
 
+msgctxt "model:ir.action.act_window.domain,name:act_stock_out_form_domain_all"
+msgid "All"
+msgstr "Todo"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_stock_out_form_domain_done"
+msgid "Done"
+msgstr "Realizado"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_stock_out_form_domain_draft"
+msgid "Draft"
+msgstr "Borrador"
+
 msgctxt "model:ir.ui.menu,name:menu_stock"
 msgid "Stock"
 msgstr "Inventario"
@@ -158,7 +272,11 @@ msgid "Stock"
 msgstr "Inventario"
 
 msgctxt "model:ir.ui.menu,name:menu_stock_initial_pos"
-msgid "Inventario Inicial"
+msgid "Ingreso de Inventario"
+msgstr "Ingreso de Inventario"
+
+msgctxt "model:ir.ui.menu,name:menu_stock_out"
+msgid "Salida de Inventario "
 msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_stock_report"
@@ -173,9 +291,17 @@ msgctxt "model:stock.line,name:"
 msgid "Stock Line"
 msgstr "Linea de Inventario"
 
+msgctxt "model:stock.line_out,name:"
+msgid "Stock Line Out"
+msgstr "Linea de Salida Inventario"
+
 msgctxt "model:stock.stock,name:"
 msgid "Stock"
 msgstr "Inventario"
+
+msgctxt "model:stock.stock_out,name:"
+msgid "Stock Out"
+msgstr "Salida Inventario"
 
 msgctxt "odt:nodux_stock_one.report_stocks:"
 msgid "$"
@@ -285,6 +411,14 @@ msgctxt "selection:stock.stock,state:"
 msgid "Draft"
 msgstr "Borrador"
 
+msgctxt "selection:stock.stock_out,state:"
+msgid "Done"
+msgstr "Realizado"
+
+msgctxt "selection:stock.stock_out,state:"
+msgid "Draft"
+msgstr "Borrador"
+
 msgctxt "view:company.company:"
 msgid "Sequence Stock"
 msgstr "Secuencia Inventario"
@@ -309,6 +443,18 @@ msgctxt "view:stock.line:"
 msgid "Stock Line"
 msgstr "Lineas de Inventario"
 
+msgctxt "view:stock.line_out:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:stock.line_out:"
+msgid "Lines"
+msgstr "Lineas"
+
+msgctxt "view:stock.line_out:"
+msgid "Stock Line"
+msgstr "Lineas de Inventario"
+
 msgctxt "view:stock.stock:"
 msgid "Done"
 msgstr "Realizado"
@@ -322,8 +468,24 @@ msgid "Stock"
 msgstr "Inventario"
 
 msgctxt "view:stock.stock:"
-msgid "Stock Initial"
-msgstr "Inventario Inicial"
+msgid "Stock In"
+msgstr "Ingreso de Inventario"
+
+msgctxt "view:stock.stock_out:"
+msgid "Done"
+msgstr "Realizado"
+
+msgctxt "view:stock.stock_out:"
+msgid "Other Info"
+msgstr "Otra Información"
+
+msgctxt "view:stock.stock_out:"
+msgid "Stock"
+msgstr "Inventario"
+
+msgctxt "view:stock.stock_out:"
+msgid "Stock Out"
+msgstr "Salida Inventario"
 
 msgctxt "wizard_button:nodux_stock_one.print_report_stock,start,end:"
 msgid "Cancel"

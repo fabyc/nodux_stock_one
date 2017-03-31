@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <!-- This file is part sale_pos module for Tryton.
 The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
-<tree string="Stock In">
-    <field name="reference"/>
-    <field name="stock_date"/>
-    <field name="state"/>
+<tree string="Lines" sequence="sequence" editable="bottom">
+    <field name="product"/>
+    <field name="description" tree_invisible="1"/>
+    <field name="quantity"/>
 </tree>
