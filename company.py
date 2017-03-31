@@ -24,3 +24,7 @@ class Company():
     @staticmethod
     def default_sequence_stock():
         return 1
+
+    @staticmethod
+    def default_sequence_stock_out():
+        return 1

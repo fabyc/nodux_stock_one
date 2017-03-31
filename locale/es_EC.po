@@ -198,7 +198,6 @@ msgctxt "field:stock.stock_out,state:"
 msgid "State"
 msgstr "Estado"
 
-#, fuzzy
 msgctxt "field:stock.stock_out,stock_date:"
 msgid "Stock Date"
 msgstr "Fecha de Inventario"

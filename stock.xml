@@ -210,6 +210,10 @@ this repository contains the full copyright notices and license terms. -->
             <field name="menu" ref="menu_stock_initial_pos"/>
             <field name="group" ref="group_stock"/>
         </record>
+        <record model="ir.ui.menu-res.group" id="menu_stock_group_stock_out">
+            <field name="menu" ref="menu_stock_out"/>
+            <field name="group" ref="group_stock"/>
+        </record>
 
     </data>
 </tryton>
