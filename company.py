@@ -15,6 +15,7 @@ class Company():
     __name__ = 'company.company'
 
     sequence_stock = fields.Integer('Sequence Stock')
+    sequence_stock_out = fields.Integer('Sequence Stock Out')
 
     @classmethod
     def __setup__(cls):

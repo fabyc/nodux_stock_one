@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form string="Stock Line" cursor="product">
+    <label name="stock"/>
+    <field name="stock" colspan="3"/>
+    <notebook colspan="4">
+        <page string="General" id="general">
+            <label name="sequence"/>
+            <field name="sequence"/>
+            <label name="product"/>
+            <field name="product"
+                view_ids="nodux_product_one.product_view_list_sale_line"/>
+            <newline/>
+            <label name="description"/>
+            <field name="description" colspan="3"/>
+            <label name="quantity"/>
+            <field name="quantity"/>
+        </page>
+    </notebook>
+</form>

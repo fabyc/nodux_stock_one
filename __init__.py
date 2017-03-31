@@ -8,6 +8,8 @@ def register():
         StockLine,
         PrintReportStockStart,
         Company,
+        StockOut,
+        StockLineOut,
         module='nodux_stock_one', type_='model')
     Pool.register(
         PrintReportStock,
