@@ -26,7 +26,8 @@ import time
 
 
 __all__ = ['Stock', 'StockLine', 'PrintReportStockStart', 'PrintReportStock',
-'ReportStock', 'StockOut', 'StockLineOut']
+'ReportStock', 'StockOut', 'StockLineOut', 'PrintReportProductStockStart',
+'PrintReportProductStock', 'ReportProductStock']
 
 _ZERO = Decimal(0)
 
@@ -469,4 +470,142 @@ class ReportStock(Report):
         report_context['hora'] = hora.strftime('%H:%M:%S')
         report_context['fecha_im'] = hora.strftime('%d/%m/%Y')
         report_context['products'] = products
+        return report_context
+
+
+class PrintReportProductStockStart(ModelView):
+    'Print Report Product Stock Start'
+    __name__ = 'nodux_stock_one.print_report_product_stock.start'
+
+    company = fields.Many2One('company.company', 'Company', required=True)
+    all_products = fields.Boolean("All products")
+    product = fields.Many2One("product.product", 'Product',states={
+        'invisible':Eval('all_products', True),
+    })
+
+    @staticmethod
+    def default_company():
+        return Transaction().context.get('company')
+
+    @staticmethod
+    def default_all_products():
+        return True
+
+    @fields.depends('all_products', 'product')
+    def on_change_all_products(self):
+        if self.all_products == True:
+            self.product = None
+
+    @fields.depends('all_products', 'product')
+    def on_change_product(self):
+        if self.product != None:
+            self.all_products = False
+
+
+class PrintReportProductStock(Wizard):
+    'Print Report Products'
+    __name__ = 'nodux_stock_one.print_report_product_stock'
+    start = StateView('nodux_stock_one.print_report_product_stock.start',
+        'nodux_stock_one.print_report_product_stock_start_view_form', [
+            Button('Cancel', 'end', 'tryton-cancel'),
+            Button('Print', 'print_', 'tryton-print', default=True),
+            ])
+    print_ = StateAction('nodux_stock_one.report_product_stock')
+
+    def do_print_(self, action):
+        if self.start.product:
+            data = {
+                'company': self.start.company.id,
+                'all_products' : self.start.all_products,
+                'product' : self.start.product.id,
+                }
+        else:
+            data = {
+                'company': self.start.company.id,
+                'all_products' : self.start.all_products,
+                'product' : None,
+                }
+
+        return action, data
+
+    def transition_print_(self):
+        return 'end'
+
+class ReportProductStock(Report):
+    __name__ = 'nodux_stock_one.report_product_stock'
+
+    @classmethod
+    def __setup__(cls):
+        super(ReportProductStock, cls).__setup__()
+
+    @classmethod
+    def get_context(cls, records, data):
+        pool = Pool()
+        User = pool.get('res.user')
+        Date = pool.get('ir.date')
+        Company = pool.get('company.company')
+        Product = pool.get('product.product')
+        StockIn = pool.get('stock.line')
+        StockOut = pool.get('stock.line_out')
+        SaleLine = pool.get('sale.line')
+        PurchaseLine = pool.get('purchase.line')
+        company = Company(data['company'])
+        all_products_verify = data['all_products']
+        product_in = data['product']
+        user = User(Transaction().user)
+        all_products = []
+
+        if all_products_verify == True:
+            products = Product.search([('active','=', True)])
+        else:
+            products = Product.search([('id','=', product_in)])
+
+        for product in products:
+            lines = {}
+            total_ventas = 0
+            total_compras = 0
+            ingreso_inventario = 0
+            salida_inventario = 0
+
+            sales = SaleLine.search([('product', '=', product)])
+            for sline in sales:
+                total_ventas += sline.quantity
+
+            purchases = PurchaseLine.search([('product', '=', product)])
+            for pline in purchases:
+                total_compras += pline.quantity
+
+            stock_in = StockIn.search([('product', '=', product)])
+            for slinein in stock_in:
+                ingreso_inventario += slinein.quantity
+
+            stock_out = StockOut.search([('product', '=', product)])
+            for slineout in stock_out:
+                salida_inventario += slineout.quantity
+
+            lines['name']=product.template.name
+            lines['ingreso_inventario'] = ingreso_inventario
+            lines['salida_inventario']= salida_inventario
+            lines['total_compras']= total_compras
+            lines['total_ventas'] = total_ventas
+            lines['total_inventario'] = product.template.total
+            print "All product", all_products
+            all_products.append(lines)
+
+
+        if company.timezone:
+            timezone = pytz.timezone(company.timezone)
+            dt = datetime.now()
+            hora = datetime.astimezone(dt.replace(tzinfo=pytz.utc), timezone)
+        else:
+            company.raise_user_error('Configure la zona Horaria de la empresa')
+
+        report_context = super(ReportProductStock, cls).get_context(records, data)
+
+
+
+        report_context['company'] = company
+        report_context['hora'] = hora.strftime('%H:%M:%S')
+        report_context['fecha_im'] = hora.strftime('%d/%m/%Y')
+        report_context['products'] = all_products
         return report_context

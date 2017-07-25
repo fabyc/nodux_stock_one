@@ -10,10 +10,13 @@ def register():
         Company,
         StockOut,
         StockLineOut,
+        PrintReportProductStockStart,
         module='nodux_stock_one', type_='model')
     Pool.register(
         PrintReportStock,
+        PrintReportProductStock,
         module='nodux_stock_one', type_='wizard')
     Pool.register(
         ReportStock,
+        ReportProductStock,
         module='nodux_stock_one', type_='report')

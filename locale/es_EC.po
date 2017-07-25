@@ -10,6 +10,22 @@ msgctxt "field:company.company,sequence_stock_out:"
 msgid "Sequence Stock Out"
 msgstr "Secuencia de Salida de Inventario"
 
+msgctxt "field:nodux_stock_one.print_report_product_stock.start,all_products:"
+msgid "All products"
+msgstr "Todos los productos"
+
+msgctxt "field:nodux_stock_one.print_report_product_stock.start,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:nodux_stock_one.print_report_product_stock.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:nodux_stock_one.print_report_product_stock.start,product:"
+msgid "Product"
+msgstr "Productos"
+
 msgctxt "field:nodux_stock_one.print_report_stock.start,all_products:"
 msgid "All products"
 msgstr "Todos los productos"
@@ -215,16 +231,24 @@ msgid "Stock"
 msgstr "Inventario"
 
 msgctxt "model:ir.action,name:act_stock_initial_form"
-msgid "Ingreso de Inventario"
+msgid "Inventario Inicial"
 msgstr ""
 
 msgctxt "model:ir.action,name:act_stock_out_form"
 msgid "Salida de Inventario"
 msgstr ""
 
+msgctxt "model:ir.action,name:report_product_stock"
+msgid "Reporte de Movimientos por Producto"
+msgstr ""
+
 msgctxt "model:ir.action,name:report_stocks"
 msgid "Reporte de Inventario"
 msgstr "Reporte de Inventario"
+
+msgctxt "model:ir.action,name:wizard_report_product_stock"
+msgid "Reporte de Movimientos por Producto"
+msgstr ""
 
 msgctxt "model:ir.action,name:wizard_stocks_report"
 msgid "Reporte de Inventario"
@@ -263,6 +287,10 @@ msgctxt ""
 msgid "Draft"
 msgstr "Borrador"
 
+msgctxt "model:ir.ui.menu,name:menu_report_product_stock"
+msgid "Reporte de Movimientos por Producto"
+msgstr ""
+
 msgctxt "model:ir.ui.menu,name:menu_stock"
 msgid "Stock"
 msgstr "Inventario"
@@ -272,7 +300,7 @@ msgid "Stock"
 msgstr "Inventario"
 
 msgctxt "model:ir.ui.menu,name:menu_stock_initial_pos"
-msgid "Ingreso de Inventario"
+msgid "Inventario Inicial"
 msgstr ""
 
 msgctxt "model:ir.ui.menu,name:menu_stock_out"
@@ -282,6 +310,10 @@ msgstr ""
 msgctxt "model:ir.ui.menu,name:menu_stock_report"
 msgid "Reporte de Inventario"
 msgstr "Reporte de Inventario"
+
+msgctxt "model:nodux_stock_one.print_report_product_stock.start,name:"
+msgid "Print Report Product Stock Start"
+msgstr "Imprimir Reporte de Movimientos por Producto"
 
 msgctxt "model:nodux_stock_one.print_report_stock.start,name:"
 msgid "Print Report Products Start"
@@ -306,6 +338,78 @@ msgstr "Inventario"
 msgctxt "model:stock.stock_out,name:"
 msgid "Stock Out"
 msgstr "Salida de Inventario"
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "/"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Compras"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "DE"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "FECHA DE IMPRESIÓN:"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Ingreso"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Ingreso Manual"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Inventario Actual"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "MOVIMIENTOS POR PRODUCTO"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Nodux Cía. Ltda."
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Producto"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "REPORTE"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Salida"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Salida Manual"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Total Ingresos"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Total Salidas"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "Ventas"
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "[ PAG."
+msgstr ""
+
+msgctxt "report:nodux_stock_one.report_product_stock:"
+msgid "]"
+msgstr ""
 
 msgctxt "report:nodux_stock_one.report_stocks:"
 msgid "$"
@@ -427,6 +531,10 @@ msgctxt "view:company.company:"
 msgid "Sequence Stock"
 msgstr "Secuencia de Inventario"
 
+msgctxt "view:nodux_stock_one.print_report_product_stock.start:"
+msgid "Reporte de Movimientos por Productos"
+msgstr ""
+
 msgctxt "view:nodux_stock_one.print_report_stock.start:"
 msgid "Print Inventory Report "
 msgstr "Imprimir Reporte de Inventario"
@@ -482,6 +590,15 @@ msgstr "Inventario"
 msgctxt "view:stock.stock_out:"
 msgid "Stock Out"
 msgstr "Salida de Inventario"
+
+msgctxt "wizard_button:nodux_stock_one.print_report_product_stock,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt ""
+"wizard_button:nodux_stock_one.print_report_product_stock,start,print_:"
+msgid "Print"
+msgstr "Imprimir"
 
 msgctxt "wizard_button:nodux_stock_one.print_report_stock,start,end:"
 msgid "Cancel"

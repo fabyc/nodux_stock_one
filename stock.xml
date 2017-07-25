@@ -216,5 +216,24 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="group_stock"/>
         </record>
 
+        <!--REPORTE MOVIMIENTOS POR PRODUCTO-->
+        <record model="ir.ui.view" id="print_report_product_stock_start_view_form">
+            <field name="model">nodux_stock_one.print_report_product_stock.start</field>
+            <field name="type">form</field>
+            <field name="name">report_product_stock_start_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_report_product_stock">
+            <field name="name">Reporte de Movimientos por Producto</field>
+            <field name="wiz_name">nodux_stock_one.print_report_product_stock</field>
+        </record>
+        <record model="ir.action.report" id="report_product_stock">
+            <field name="name">Reporte de Movimientos por Producto</field>
+            <field name="model"></field>
+            <field name="report_name">nodux_stock_one.report_product_stock</field>
+            <field name="report">nodux_stock_one/report_product_stock.odt</field>
+            <field name="template_extension">odt</field>
+        </record>
+        <menuitem parent="menu_stock" action="wizard_report_product_stock"
+            id="menu_report_product_stock" icon="tryton-print"/>
     </data>
 </tryton>
